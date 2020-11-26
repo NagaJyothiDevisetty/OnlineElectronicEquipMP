@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "462722165745",
+    "firebase_url": "https://onlineelectronicequipment.firebaseio.com",
+    "project_id": "onlineelectronicequipment",
+    "storage_bucket": "onlineelectronicequipment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462722165745:android:19afd98611ae0395b37250",
+        "android_client_info": {
+          "package_name": "com.example.onlineelectronicequipment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462722165745-o0j4cckjcvfiko494qg5djg81vlqb4k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbP7gbMOW0ZdOKgQ_Bn_p2yg1GVXbNTMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462722165745-o0j4cckjcvfiko494qg5djg81vlqb4k2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
