@@ -49,7 +49,7 @@ public class Retrieve extends AppCompatActivity {
             });
         }
         public void GetData(){
-            db.collection("Products").document(userID).collection("Userproducts")
+            db.collection("Products")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override

@@ -29,7 +29,6 @@ public class Addingproducts extends AppCompatActivity {
     ImageView add;
     EditText productName, descriptions, prices;
     FirebaseFirestore db;
-    private static final  int GalleryPick=1;
     private ProgressDialog loadingBar;
 
     @Override
