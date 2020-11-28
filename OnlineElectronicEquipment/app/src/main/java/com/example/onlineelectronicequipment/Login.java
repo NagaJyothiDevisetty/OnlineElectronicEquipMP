@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.onlineelectronicequipment.model.Users;
@@ -23,8 +24,11 @@ public class Login extends AppCompatActivity {
     private Button loginBtn,registerBtn;
     private EditText loginemail, loginpassword;
     ProgressDialog loadingBar;
+    private TextView admin;
     private String parentDbName="Registration";
+    private String childDb="Admin";
     FirebaseFirestore db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,14 @@ public class Login extends AppCompatActivity {
         registerBtn = (Button) findViewById(R.id.register);
         loginemail = (EditText) findViewById(R.id.email);
         loginpassword = (EditText) findViewById(R.id.password);
+        admin=(TextView)findViewById(R.id.admin);
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Login.this,Registration.class);
+                startActivity(intent);
+            }
+        });
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +89,7 @@ public class Login extends AppCompatActivity {
     }
     private void AllowAccessToAccount(final  String email,final String password)
     {
+
         db.collection(parentDbName)
                 .get()
               .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>()

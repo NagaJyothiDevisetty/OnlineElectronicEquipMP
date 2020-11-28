@@ -92,18 +92,19 @@ public class Registration extends AppCompatActivity {
 
     private void ValidateEmail(String username, String phone, String email, String password) {
         HashMap<String, Object> userdataMap = new HashMap<>();
+        HashMap<String, Object> admindataMap = new HashMap<>();
         userdataMap.put("username",username);
         userdataMap.put("email", email);
         userdataMap.put("phone", phone);
         userdataMap.put("password", password);
 
-        db.collection("Registration")
+        db.collection("Registration").document().collection("Admin")
                 .add(userdataMap)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Toast.makeText(Registration.this,"Your account is created Successfully",Toast.LENGTH_SHORT).show();
-                    loadingBar.dismiss();
+                        loadingBar.dismiss();
                         Intent intent=new Intent(Registration.this,Login.class);
                     startActivity(intent);
                     finish();
