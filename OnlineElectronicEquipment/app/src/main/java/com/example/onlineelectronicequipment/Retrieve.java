@@ -31,7 +31,6 @@ public class Retrieve extends AppCompatActivity {
     String userID;
     private String childDbName="Addingproducts";
     private ProgressDialog loadingBar;
-    private FirebaseApp signout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,8 @@ public class Retrieve extends AppCompatActivity {
 
                                 for(DocumentSnapshot document : task.getResult()){
                                     Products products = document.toObject(Products.class);
-                                    resultStr += "Name: "+products.getProductname() + "\nDescription: "+products.getDescription() + "\nPrice: " +products.getPrice()
+                                    resultStr += "Name: "+products.getProductname() + "\nDescription: " +
+                                            ""+products.getDescription() + "\nPrice: " +products.getPrice()
                                             + "\n\n";
                                 }
                                 info.setText(resultStr);

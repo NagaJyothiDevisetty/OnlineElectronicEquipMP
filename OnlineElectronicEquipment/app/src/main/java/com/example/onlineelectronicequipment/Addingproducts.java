@@ -86,7 +86,7 @@ public class Addingproducts extends AppCompatActivity {
                         Toast.makeText(this, "Please write  product price", Toast.LENGTH_SHORT).show();
                     } else {
                         loadingBar.setTitle("Addingproducts");
-                        loadingBar.setMessage("Please wait, while we are checking the credentials.");
+                        loadingBar.setMessage("Please wait, while we are checking the Product details .");
                         loadingBar.setCanceledOnTouchOutside(false);
                         loadingBar.show();
 
@@ -108,8 +108,8 @@ public class Addingproducts extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
         @Override
         public void onSuccess(DocumentReference documentReference) {
-            Toast.makeText(getApplicationContext(),"Your account is created Successfully",Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(Addingproducts.this,Addingproducts.class);
+            Toast.makeText(getApplicationContext(),"products are added Successfully",Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(Addingproducts.this,ProductDetails.class);
             startActivity(intent);
             finish();
         }
