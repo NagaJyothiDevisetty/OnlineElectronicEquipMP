@@ -3,7 +3,9 @@ package com.example.onlineelectronicequipment.model;
 public class Users {
 
  private String username,phone,email,password;
- 
+ public Users()
+ {
+ }
 
     public Users(String username, String phone, String email, String password) {
         this.username = username;
